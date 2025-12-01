@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Linkedin, Github, ExternalLink, Code, Shield, Brain, Database, Server, Smartphone, Menu, X } from 'lucide-react';
-import profile from './assets/profile.jpg';
+
 
 // Add Google Fonts for bubble fonts
 const style = document.createElement('style');
@@ -411,7 +411,7 @@ export default function Portfolio() {
                   <div className="w-full h-full bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 flex items-center justify-center">
                   <div className="relative w-80 h-80 bg-gradient-to-br from-white to-gray-100 rounded-full shadow-2xl overflow-hidden border-8 border-white/50 backdrop-blur-sm">
                 <img
-                  src={profile}
+                  src="/profile.jpg" 
                   alt="My Photo"
                   className="w-full h-full object-cover"
                 />
