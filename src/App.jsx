@@ -128,8 +128,7 @@ const ProjectCard = ({ title, description, technologies, github, demo, tags, ico
   };
 
   return (
-    <div
-      className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+    <div className="h-full flex flex-col bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -206,45 +205,16 @@ export default function Portfolio() {
   }, []);
 
   const projects = [
-    {
-      id: 1,
-      title: "ECHO 911",
-      description: "Real-time dispatcher dashboard for 911 calls. Won 1st place out of 36 teams at Breaking Barriers Hackathon. Built with React frontend, Python backend, leveraging AWS services for call transcription and incident analysis.",
-      technologies: ["React", "Python", "AWS Lambda", "AWS Bedrock", "OpenStreetMap API"],
-      github: null,
-      demo: null,
-      tags: ["Full Stack Development", "Artificial Intelligence"],
-      icon: Code
-    },
-    {
-      id: 2,
-      title: "Dwell Time Predictor",
-      description: "Machine learning project in collaboration with Solventum. Experimenting with 12+ LLM models to optimize F1 score and accuracy using proprietary datasets. Partnering with cross-functional teams for interdisciplinary competitions.",
-      technologies: ["Python", "TensorFlow", "Scikit-learn", "Pandas"],
-      github: null,
-      demo: null,
-      tags: ["Machine Learning", "Artificial Intelligence"],
-      icon: Brain
-    },
+    
     {
       id: 3,
       title: "Coordination App for Wellness Center",
-      description: "Full-stack coordination application for a nonprofit wellness center. Built to streamline service and ride scheduling for older adults. Features real-time scheduling, OAuth authorization, and Docker containerization.",
+      description: "Helped build a full-stack coordination application for a nonprofit wellness center. This webapp was built to streamline service and ride scheduling for older adults who are unable to drive on their own. I worked on developing the UI for the admin page, setting up admin routes, redesigning the database, and working on OAuth autherization.", 
       technologies: ["React", "Tailwind CSS", "JavaScript", "Docker", "OAuth"],
       github: "https://github.com/UTDallasEPICS/Wellness-Center-Older-Adults",
       demo: null,
       tags: ["Full Stack Development"],
       icon: Smartphone
-    },
-    {
-      id: 4,
-      title: "Network Security Lab - Attack Pathway Detection",
-      description: "Contributing to attack pathway detection techniques by analyzing network traffic and process activity. Implemented 6 tracking strategies in C# and built database system with MongoDB/SQL reducing query time by 30%.",
-      technologies: ["C#", "MongoDB", "SQL", "Linux", "MAGIC Anomaly Detection"],
-      github: null,
-      demo: null,
-      tags: ["Cybersecurity"],
-      icon: Shield
     },
     {
       id: 5,
@@ -259,7 +229,7 @@ export default function Portfolio() {
     {
       id: 6,
       title: "Insurance Chatbot",
-      description: "React-based insurance claims chatbot with OpenAI integration. Analyzes claim data and generates fraud probability insights. Python Flask backend handles API requests and connects React frontend with OpenAI predictions.",
+      description: "A React-based application that analyzes if insurence claims are fradulant by using the OpenAI API. We built this project using a Python Flask backend which handles API requests and connects the React frontend with OpenAI predictions.",
       technologies: ["React", "Python Flask", "OpenAI API", "JavaScript", "CSS"],
       github: null,
       demo: null,
@@ -269,7 +239,7 @@ export default function Portfolio() {
     {
       id: 7,
       title: "Consulting - Storehouse Community Center",
-      description: "180 Degrees Consulting project delivering five research-backed recommendations for improving community engagement. Designed Figma prototypes and conducted A/B testing to assess solution effectiveness.",
+      description: "This was a 180 Degrees Consulting project through which I delivered five research-backed recommendations for improving the UI of a non-profit's website. By designing Figma prototypes and conducting A/B testing through students at UT Dallas, I assesed the effectiveness of my recommendations and worked with the team to develop a report and final presentation for the non-profit.",
       technologies: ["Figma", "Data Analysis", "A/B Testing", "Research"],
       github: null,
       demo: null,
@@ -279,7 +249,7 @@ export default function Portfolio() {
     {
       id: 8,
       title: "Ransomware Attack Simulation",
-      description: "Educational cybersecurity project demonstrating attack techniques. Built Python keylogger bypassing Windows firewall, HTML phishing website, and Java-based ransomware. Used Metasploit for reverse shell generation.",
+      description: " Simulated a randomware attack by using a windows virtual machine. By building a python keylogeer and sending it through a phishing email, then using those credentials to reverse shell into a system, I created an educational project to get experience working with pen testing tools. ", 
       technologies: ["Python", "Java", "Metasploit", "HTML", "Windows Security"],
       github: null,
       demo: null,
@@ -299,7 +269,7 @@ export default function Portfolio() {
     {
       id: 10,
       title: "System Verilog Vulnerability Detector",
-      description: "AI-based tool detecting vulnerabilities in System Verilog code using NLP. Fine-tuned BERT model with CodeBERT tokenizer. Experimented with learning rates, batch sizes, and activation functions for optimal performance.",
+      description: "Built an AI-based tool to detect vulnerabilities in System Verilog code using a fine-tuned BERT model with CodeBERT tokenizer. I experimented with learning rates, batch sizes, and activation functions to get the highest accuracy and created a dataset of vulnerable code with CWE's.",
       technologies: ["BERT", "CodeBERT", "Python", "NLP", "Deep Learning"],
       github: "https://github.com",
       demo: null,
@@ -307,9 +277,9 @@ export default function Portfolio() {
       icon: Code
     },
     {
-      id: 11,
+      id: 1,
       title: "Federated Learning Attack - Detect and Defend",
-      description: "Led 5-person team developing ML model to attack Federated Learning systems. Reconstructed training datasets using gradient reversal techniques. Utilized LeNet-5 architecture with MNIST dataset for model evaluation.",
+      description: "Led a 5-person team developing ML model to attack Federated Learning systems by reconstructed training datasets using gradient reversal techniques. We analyzed differet architectures and datasets to find that the LeNet-5 architecture with MNIST dataset had the best F1 score.",
       technologies: ["Python", "PyTorch", "Machine Learning", "Federated Learning"],
       github: null,
       demo: null,
@@ -317,15 +287,46 @@ export default function Portfolio() {
       icon: Brain
     },
     {
-      id: 12,
+      id: 2,
       title: "Women Who Compute - Backend Development",
-      description: "Integrated MongoDB backend for member management system. Implemented role-based access control with OAuth authorization. Built 3 features for member tracking, improving efficiency by 35%.",
+      description: "I integrated a member portal for the org website. By setting up a mongoDB backend, I implemented role-based access control with OAuth authoration and built features for member tracking such as event attendance, event rsvp's, and resume uploads." , 
       technologies: ["MongoDB", "Backend APIs", "OAuth", "Role-Based Access Control"],
       github: null,
       demo: null,
       tags: ["Full Stack Development"],
       icon: Database
+    },
+    {
+      id: 2,
+      title: "Dwell Time Predictor",
+      description: " By copmaring the F1 scores, precision, accuracy, and recall of 12+ LLM models such as linear regressions, decision trees, and feature weighing method, my team and I built a model to predict how long an adhesive would remain on one's body over time. This project was in collaboration with Solventum so I was working with their research specialist and presented our work to employees at the company.", 
+      technologies: ["Python", "TensorFlow", "Scikit-learn", "Pandas"],
+      github: null,
+      demo: null,
+      tags: ["Machine Learning", "Artificial Intelligence"],
+      icon: Brain
+    }, 
+    {
+      id: 12,
+      title: "ECHO 911",
+      description: "•	Built a real-time dispatcher dashboard using React (frontend) and Python (backend) to display 911 calls transcripts, display policies to follow on scene, and support dispatcher decision-making. My team and I leveraged AWS services (Connect, Lambda, Bedrock, Strands, S3, Polly) to transcribe calls, extract key details, and evaluate incident severity and then integrated OpenStreetMap API, Open-Meteo API, Amazon Bedrock, and Claude Sonnet to enrich emergency location data and automate first responder mapping to the event.",
+      technologies: ["React", "Python", "AWS Lambda", "AWS Bedrock", "OpenStreetMap API, Tailwind CSS, AWS S3"],
+      github: "https://github.com/echo-911/echo-911",
+      demo: null,
+      tags: ["Full Stack Development", "Artificial Intelligence"],
+      icon: Code
+    },
+    {
+      id: 11,
+      title: "Systems Security Lab at UT Dallas- Network Graph Generation",
+      description: "I contributed to attack pathway detection techniques by generating network graphs based off of an initial BFS tracking strategy. By prioritizing rare and process events, I Implemented 6 tracking strategies in C# and automated the process of migrating information from a PostgreSQL database to a MongoDB database that stored event counts. Our team then analyzed the results of these graphs on different ML downstream tasks such as the anomaly detection.",
+      technologies: ["C#", "MongoDB", "SQL", "Linux", "MAGIC Anomaly Detection, Automation"],
+      github: null,
+      demo: null,
+      tags: ["Cybersecurity, Machine Learning"],
+      icon: Shield
     }
+    
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -359,11 +360,7 @@ export default function Portfolio() {
               <p className="text-xl md:text-2xl mb-6 text-gray-700 font-medium bubble-font">
                 Software Engineer | Cybersecurity Researcher | ML Enthusiast
               </p>
-              <p className="text-lg mb-8 text-gray-600 leading-relaxed max-w-lg">
-                Passionate about building secure, intelligent systems and solving complex problems 
-                through innovative technology solutions. Always eager to take on new challenges 
-                and create meaningful impact.
-              </p>
+              
               
               {/* Contact Links */}
               <div className="flex flex-wrap gap-4 mb-8">
@@ -409,13 +406,13 @@ export default function Portfolio() {
                 {/* Profile Picture Container */}
                 <div className="relative w-80 h-80 bg-gradient-to-br from-white to-gray-100 rounded-full shadow-2xl overflow-hidden border-8 border-white/50 backdrop-blur-sm">
                   <div className="w-full h-full bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 flex items-center justify-center">
-                  <div className="relative w-80 h-80 bg-gradient-to-br from-white to-gray-100 rounded-full shadow-2xl overflow-hidden border-8 border-white/50 backdrop-blur-sm">
-                <img
-                  src="/profile.jpg" 
-                  alt="My Photo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+                  <img
+  src="/profile.JPG"
+  alt="My Photo"
+  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+/>
+
+             
                   </div>
                 </div>
               </div>
@@ -444,7 +441,7 @@ export default function Portfolio() {
                   I'm a passionate developer and security researcher at UT Dallas, specializing in full-stack development, cybersecurity research, and machine learning applications. I'm driven by building secure, scalable systems that solve real-world problems.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  From leading research initiatives and consulting projects, I combine technical expertise with leadership to create meaningful impact in technology. Currently exploring the intersection of AI security and system defense.
+                  From working on technical and consulting projects, I combine technical expertise with leadership to create meaningful impact in technology. Please feel free to check out some of my projects below!
                 </p>
               </div>
 
@@ -454,7 +451,7 @@ export default function Portfolio() {
                     <Code className="w-6 h-6 text-blue-500" />
                     <h3 className="font-bold text-gray-800 bubble-font">Full Stack Development</h3>
                   </div>
-                  <p className="text-gray-600 text-sm">React, Python, Node.js, MongoDB</p>
+                  <p className="text-gray-600 text-sm">React, Python, Node.js, MongoDB, JavaScript, Tailwind CSS</p>
                 </div>
                 
                 <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-xl">
@@ -462,7 +459,7 @@ export default function Portfolio() {
                     <Shield className="w-6 h-6 text-pink-500" />
                     <h3 className="font-bold text-gray-800 bubble-font">Cybersecurity</h3>
                   </div>
-                  <p className="text-gray-600 text-sm">Penetration Testing, Malware Analysis, MITRE ATT&CK, Binary</p>
+                  <p className="text-gray-600 text-sm">Penetration Testing, Malware Analysis, MITRE ATT&CK, Binary Exploitation</p>
                 </div>
 
                 <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl">
@@ -470,7 +467,7 @@ export default function Portfolio() {
                     <Brain className="w-6 h-6 text-green-500" />
                     <h3 className="font-bold text-gray-800 bubble-font">AI & Machine Learning</h3>
                   </div>
-                  <p className="text-gray-600 text-sm">Deep Learning, NLP, BERT, Federated Learning</p>
+                  <p className="text-gray-600 text-sm">Image Classification, NLP, BERT, Federated Learning</p>
                 </div>
               </div>
             </div>
@@ -482,7 +479,7 @@ export default function Portfolio() {
       <section id="projects" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto mb-16">
-            <span className="text-purple-600 font-semibold bubble-font">Portfolio</span>
+            <span className="text-purple-600 font-semibold bubble-font">Project Portfolio</span>
             <h2 className="text-5xl font-bold text-gray-900 mt-2 mb-6 bubble-font">Featured Projects & Experience</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-500"></div>
           </div>
@@ -530,7 +527,7 @@ export default function Portfolio() {
             <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mb-8"></div>
             
             <p className="text-gray-600 text-lg mb-12 leading-relaxed">
-              I'm always interested in hearing about new projects, opportunities, and collaborations. Whether you have a question or just want to connect, feel free to reach out!
+              Please feel free to reach out if you have any questions or want to do any projects together!
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
