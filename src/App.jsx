@@ -297,7 +297,7 @@ export default function Portfolio() {
       icon: Database
     },
     {
-      id: 2,
+      id: 13,
       title: "Dwell Time Predictor",
       description: " By copmaring the F1 scores, precision, accuracy, and recall of 12+ LLM models such as linear regressions, decision trees, and feature weighing method, my team and I built a model to predict how long an adhesive would remain on one's body over time. This project was in collaboration with Solventum so I was working with their research specialist and presented our work to employees at the company.", 
       technologies: ["Python", "TensorFlow", "Scikit-learn", "Pandas"],
