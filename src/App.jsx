@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Mail, Linkedin, Github, ExternalLink, Code, Shield, Brain, Database, Server, Smartphone, Menu, X } from 'lucide-react';
-
+import { ChevronDown, Mail, Linkedin, Github, ExternalLink, Code, Shield, Brain, Database, Server, Smartphone, Menu, X, FileText } from 'lucide-react';
 
 // Add Google Fonts for bubble fonts
 const style = document.createElement('style');
@@ -30,13 +29,18 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'contact', label: 'Contact' },
+    { id: 'resume', label: 'Resume', isExternal: true }
   ];
 
-  const handleNavClick = (sectionId) => {
-    setActiveSection(sectionId);
+  const handleNavClick = (item) => {
+    if (item.isExternal) {
+      window.open('/resume.pdf', '_blank');
+      return;
+    }
+    setActiveSection(item.id);
     setIsOpen(false);
-    const element = document.getElementById(sectionId);
+    const element = document.getElementById(item.id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -371,6 +375,16 @@ export default function Portfolio() {
                   <Mail size={20} className="text-purple-500" />
                   <span>Email</span>
                 </a>
+                {/* NEW RESUME BUTTON */}
+  <a
+    href="/resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-2 bg-white/70 backdrop-blur-sm px-6 py-3 rounded-full hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg text-gray-700"
+  >
+    <FileText size={20} className="text-pink-500" />
+    <span>Resume</span>
+  </a>
                 <a
                   href="https://linkedin.com/in/aaryaamoharir"
                   target="_blank"
@@ -407,7 +421,7 @@ export default function Portfolio() {
                 <div className="relative w-80 h-80 bg-gradient-to-br from-white to-gray-100 rounded-full shadow-2xl overflow-hidden border-8 border-white/50 backdrop-blur-sm">
                   <div className="w-full h-full bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 flex items-center justify-center">
                   <img
-  src="/profile.JPG"
+  src="/profile.jpeg"
   alt="My Photo"
   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
 />
