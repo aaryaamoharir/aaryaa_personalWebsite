@@ -452,7 +452,7 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  I'm a passionate developer and security researcher at UT Dallas, specializing in full-stack development, cybersecurity research, and machine learning applications. I'm driven by building secure, scalable systems that solve real-world problems.
+                  I'm a passionate developer and security researcher at Carnegie Mellon University, specializing in full-stack development, cybersecurity research, and machine learning applications. I'm driven by building secure, scalable systems that solve real-world problems.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   From working on technical and consulting projects, I combine technical expertise with leadership to create meaningful impact in technology. Please feel free to check out some of my projects below!
@@ -579,7 +579,7 @@ export default function Portfolio() {
       <footer className="bg-gradient-to-r from-purple-600 to-pink-500 text-white py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="bubble-font">
-            © 2024 Aaryaa Moharir. Built with React, Tailwind CSS & ❤️
+            Aaryaa Moharir
           </p>
         </div>
       </footer>
